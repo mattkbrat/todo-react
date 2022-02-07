@@ -7,7 +7,7 @@ export default function MyFooter() {
         <div>
             <footer className="App-footer">
                 <div className="flexcon">
-                    <h4 className="mb-3">Click to toggle task's completion state. Double click to remove task</h4>
+                    <h4 className="mb-3">Single click: toggle; Double click: remove</h4>
                 </div>
             </footer>
         </div>
