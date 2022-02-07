@@ -32,10 +32,17 @@ function App() {
     setTodoList(newTodoList);
   }
 
+  const handleKeyPress = (e, todo) => {
+    if (e.key === "Enter" && todo !== ""){
+      addTodo(todo)
+
+    }
+  }
+
   return (
       <body>
-      <MyHeader />
-        <FormTodo addTodo={addTodo}/>
+        <MyHeader />
+        <FormTodo addTodo={addTodo} handleKeyPress={handleKeyPress}/>
         <body className="div-main">
           {todoList.map((todo, index) => (
               <Card>

@@ -1,7 +1,7 @@
 import React from "react";
-import {Button, Form} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 
-function FormTodo({ addTodo }){
+function FormTodo({ addTodo, handleKeyPress }){
     const [value, setValue] = React.useState("");
 
     const handleSubmit = e => {
@@ -19,11 +19,10 @@ function FormTodo({ addTodo }){
                 </b></Form.Label>
                 <Form.Control type="text" className="input" value={value}
                               onChange={e => setValue(e.target.value)}
-                              placeholder="Add new todo"/>
+                              placeholder="Add new todo. Strike the enter key to add."
+                              onKeyPress={() =>
+                                  handleKeyPress(value) }/>
             </Form.Group>
-            <Button variant="primary mb-3" type="submit">
-                SUBMIT️
-            </Button>
         </Form>
     )
 }

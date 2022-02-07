@@ -6,7 +6,7 @@ import "./App.css";
 const MyHeader = () => {
     return(
         <div className='p-5 text-center bg-primary-1' >
-            <h1 className="mb-3">Simple Todo App</h1>
+            <h1 className="mb-3">SIMPLE TODO APP</h1>
         </div>
     )
 }
