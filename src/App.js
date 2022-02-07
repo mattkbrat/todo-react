@@ -4,6 +4,8 @@ import { Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Todo from "./Todo";
 import FormTodo from "./FormTodo";
+import MyHeader from "./MyHeader";
+import MyFooter from "./MyFooter";
 
 function App() {
   const [todoList, setTodoList] = React.useState([
@@ -20,7 +22,7 @@ function App() {
 
   const markCompleted = index => {
     const newTodoList = [...todoList];
-    newTodoList[index].isCompleted = true;
+    newTodoList[index].isCompleted = newTodoList[index].isCompleted !== true;
     setTodoList(newTodoList);
   }
 
@@ -31,10 +33,10 @@ function App() {
   }
 
   return (
-      <>
-      <h1 className="text-center mb-4">Todo List</h1>
+      <body>
+      <MyHeader />
         <FormTodo addTodo={addTodo}/>
-        <div>
+        <body className="div-main">
           {todoList.map((todo, index) => (
               <Card>
                 <Card.Body>
@@ -48,8 +50,9 @@ function App() {
                 </Card.Body>
               </Card>
           ))}
-        </div>
-      </>
+        </body>
+        <MyFooter/>
+      </body>
   )
 
 }

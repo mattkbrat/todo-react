@@ -12,7 +12,7 @@ function FormTodo({ addTodo }){
     };
 
     return (
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} className="div-main">
             <Form.Group>
                 <Form.Label><b>
                     Add Todo
@@ -22,7 +22,7 @@ function FormTodo({ addTodo }){
                               placeholder="Add new todo"/>
             </Form.Group>
             <Button variant="primary mb-3" type="submit">
-                🙆‍♂️Submit 🙆‍♂️
+                SUBMIT️
             </Button>
         </Form>
     )

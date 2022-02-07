@@ -8,4 +8,49 @@
   display: flex;
   font-size: 18px;
   justify-content: space-between;
+  overflow-wrap: anywhere;
+}
+
+.Form {
+  margin: 150px 20%;
+}
+
+.div-main{
+  padding: 5px 10vw;
+  width: 100%;
+  position: center;
+  align-items: center;
+  horiz-align: center;
+  vertical-align: center;
+}
+
+.bg-primary-1 {
+  background-color: #E2C2C6;
+}
+
+.App-footer {
+  background-color: #E2C2C6;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 1vh;
+  justify-content: center;
+  font-size: inherit;
+  color: white;
+  align-items: center;
+  column-gap: 5px;
+  vertical-align: center;
+}
+
+.heart{
+  color: red;
+  font-size: x-large;
+}
+
+.flexcon{
+  display: flex;
+  column-gap: 10px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
 }
