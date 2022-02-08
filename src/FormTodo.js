@@ -1,5 +1,5 @@
 import React from "react";
-import {Form} from "react-bootstrap";
+import {Button, Form} from "react-bootstrap";
 
 function FormTodo({ addTodo, handleKeyPress }){
     const [value, setValue] = React.useState("");
@@ -22,6 +22,7 @@ function FormTodo({ addTodo, handleKeyPress }){
                               placeholder="Add new todo. Strike the enter key to add."
                               onKeyPress={() =>
                                   handleKeyPress(value) }/>
+                <Button onClick={handleSubmit}>SUBMIT</Button>
             </Form.Group>
         </Form>
     )
